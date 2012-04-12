@@ -17,6 +17,8 @@ class Python31 < Formula
   depends_on 'sqlite'   => :optional  # Prefer over OS X's older version
   depends_on 'gdbm'     => :optional
 
+  keg_only 'This formula would clash with python3 if it was not keg-only.'
+
   def options
     [
       ["--framework", "Do a 'Framework' build instead of a UNIX-style build."],
